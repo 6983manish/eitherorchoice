@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://eitherorchoice.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://eitherorchoice.com/</loc></url>
+  <url><loc>https://eitherorchoice.com/about.html</loc></url>
+  <url><loc>https://eitherorchoice.com/calculators.html</loc></url>
+  <url><loc>https://eitherorchoice.com/calculators/prepay-vs-invest.html</loc></url>
 </urlset>
