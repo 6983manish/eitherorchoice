@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Prepay Loan vs Invest – EitherOrChoice</title>
+  <meta name="description" content="Should you prepay your loan or invest the money? Use this decision calculator with AI reasoning." />
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <strong>EitherOrChoice</strong>
+    <div>
+      <a href="/">Home</a>
+      <a href="/calculators.html">Calculators</a>
+      <a href="/about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Prepay Loan vs Invest</h1>
+
+  <div class="card">
+    <label>Loan Interest Rate (%)</label>
+    <input id="loanRate" type="number" />
+
+    <label>Expected Investment Return (%)</label>
+    <input id="investmentRate" type="number" />
+
+    <label>Available Amount (₹)</label>
+    <input id="amount" type="number" />
+
+    <button onclick="calculate()">Get Recommendation</button>
+  </div>
+
+  <div class="card" id="result" style="display:none;"></div>
+</div>
+
+<footer>© 2026 eitherorchoice.com</footer>
+
+<script src="/js/prepay-vs-invest.js"></script>
+</body>
+</html>
