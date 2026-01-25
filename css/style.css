@@ -1,70 +1,137 @@
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
-  background: #f9fafb;
-  color: #111827;
+/* ================================
+   THEME 1: CLARITY BLUE
+   Rational • Trustworthy • Financial-First
+   ================================ */
+
+:root {
+  --bg-main: #f6f8fb;
+  --bg-header: #0f172a;
+  --bg-card: #ffffff;
+
+  --primary: #1d4ed8;        /* Core Trust Blue */
+  --primary-hover: #1e40af;
+
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+
+  --border-soft: #e5e7eb;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
+
+/* -------- Global -------- */
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* -------- Header -------- */
 
 header {
-  background: #0f172a;
-  color: white;
-  padding: 16px 24px;
-}
-
-nav {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #111827 60%,
+    #0b1220 100%
+  );
+  color: #ffffff;
   padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-h1, h2, h3 {
-  color: #020617;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
+
+header p {
+  margin-top: 8px;
+  color: #cbd5f5;
+  font-size: 1rem;
+}
+
+/* -------- Layout -------- */
+
+main {
+  max-width: 960px;
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+/* -------- Cards -------- */
 
 .card {
-  background: white;
-  padding: 24px;
+  background: var(--bg-card);
+  padding: 28px 30px;
   border-radius: 12px;
   margin-bottom: 24px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
 }
 
-button {
-  background: #2563eb;
-  color: white;
-  border: none;
-  padding: 12px 18px;
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* -------- Primary Action -------- */
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  background: var(--primary);
+  padding: 10px 18px;
   border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 6px 0 16px;
-  border-radius: 6px;
-  border: 1px solid #cbd5f5;
+.card a:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(29, 78, 216, 0.25);
 }
+
+/* -------- Secondary / Read-only Links -------- */
+
+.card a.secondary {
+  background: transparent;
+  color: var(--primary);
+  padding-left: 0;
+}
+
+.card a.secondary:hover {
+  text-decoration: underline;
+  box-shadow: none;
+  transform: none;
+}
+
+/* -------- Footer -------- */
 
 footer {
-  background: #e5e7eb;
-  padding: 20px;
   text-align: center;
-  font-size: 14px;
+  padding: 24px;
+  background: #eef2f7;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-soft);
 }
